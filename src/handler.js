@@ -45,7 +45,7 @@ const getAllNotesHandler = () => ({
 });
 
 const getNoteByIdHandler = (request,h)=>{
-    const {id} = request.params;
+    const { id }  = request.params;
     const note = notes.filter((n)=> n.id === id)[0];
 
     if(note !== undefined){
@@ -103,7 +103,7 @@ const deleteNoteByIdHandler = (request,h)=>{
             status:'succes',
             message:'catatan berhasil dihapus',
         });
-        response.cod(202);
+        response.code(202);
         return response;
     }
     const response = h.response({
